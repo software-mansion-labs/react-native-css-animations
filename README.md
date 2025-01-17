@@ -1,9 +1,9 @@
 <img width="1100" alt="header" src="https://github.com/user-attachments/assets/f007398e-68f6-446a-8580-8a0fb3fab57a" />
 
-Ready-to-use CSS Animation presets for React Native Reanimated
+Ready-to-use CSS Animation presets for [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 
 > [!TIP]
-> Since version 4.0, [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) comes with a native support for CSS Animations and Transitions. Read [the full announcement to learn more](https://blog.swmansion.com/).
+> Since version 4.0, React Native Reanimated comes with a native support for CSS Animations and Transitions. Read [the full announcement to learn more](https://blog.swmansion.com/).
 
 ## Installation
 
