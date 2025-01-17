@@ -20,14 +20,12 @@ Add `spin` style object to an `Animated` component add a linear spinning animati
 
 <img src="https://github.com/user-attachments/assets/d3a87650-83f4-476b-bf85-832a3a2d0fea" alt="Spin animation demo" align="right" width="275" />
 
-```typescript
+```jsx
 import { spin } from 'react-native-css-animations';
 import Animated from 'react-native-reanimated';
 
 function App() {
-  return (
-    <Animated.View style={[styles.spinner, spin]}/>
-  )
+  return <Animated.View style={[styles.spinner, spin]} />;
 }
 ```
 
@@ -37,14 +35,12 @@ Add `ping` style object to an `Animated` component to make the element scale and
 
 <img src="https://github.com/user-attachments/assets/51c604b4-621b-4821-ab9a-f289f15e07ae" alt="Ping animation demo" align="right" width="275" />
 
-```typescript
+```jsx
 import { ping } from 'react-native-css-animations';
 import Animated from 'react-native-reanimated';
 
 function App() {
-  return (
-    <Animated.View style={[styles.notification, ping]}/>
-  )
+  return <Animated.View style={[styles.notification, ping]} />;
 }
 ```
 
@@ -54,14 +50,12 @@ Add `pulse` style object to an `Animated` component to make it fade in and out. 
 
 <img src="https://github.com/user-attachments/assets/d36924b1-f4f8-4bd4-b3dd-a298d3b2f4b6" alt="Pulse animation demo" align="right" width="275"/>
 
-```typescript
+```jsx
 import { pulse } from 'react-native-css-animations';
 import Animated from 'react-native-reanimated';
 
 function App() {
-  return (
-    <Animated.View style={[styles.skeleton, pulse]}/>
-  )
+  return <Animated.View style={[styles.skeleton, pulse]} />;
 }
 ```
 
@@ -71,14 +65,28 @@ Add `bounce` style object to an `Animated` component to make it bounce up and do
 
 <img src="https://github.com/user-attachments/assets/81e75ed0-b7ec-4f56-a06a-c593a626cb39" alt="Bounce animation demo" align="right" width="275" />
 
-```typescript
+```jsx
 import { bounce } from 'react-native-css-animations';
 import Animated from 'react-native-reanimated';
 
 function App() {
+  return <Animated.View style={[styles.arrow, bounce]} />;
+}
+```
+
+## Alternative API
+
+The following animations are also available in a form of React Native components.
+
+```jsx
+import { Spin, Ping, Pulse, Bounce } from 'react-native-css-animations';
+
+function App() {
   return (
-    <Animated.View style={[styles.arrow, bounce]}/>
-  )
+    <Bounce>
+      <ArrowIcon />
+    </Bounce>
+  );
 }
 ```
 

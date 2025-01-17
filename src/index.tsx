@@ -20,8 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import { cubicBezier } from 'react-native-reanimated';
+import Animated, { cubicBezier } from 'react-native-reanimated';
 import type { CSSStyleDeclaration } from 'react-native-reanimated/lib/typescript/css/types';
+
+interface CSSAnimationProps {
+  style?: CSSStyleDeclaration;
+}
 
 export const spin: CSSStyleDeclaration = {
   animationName: {
@@ -33,6 +37,18 @@ export const spin: CSSStyleDeclaration = {
   animationTimingFunction: 'linear',
   animationIterationCount: 'infinite',
 };
+
+export function Spin({
+  style,
+  children,
+  ...rest
+}: React.PropsWithChildren<CSSAnimationProps>): JSX.Element {
+  return (
+    <Animated.View style={[spin, style]} {...rest}>
+      {children}
+    </Animated.View>
+  );
+}
 
 export const ping: CSSStyleDeclaration = {
   animationName: {
@@ -46,6 +62,18 @@ export const ping: CSSStyleDeclaration = {
   animationIterationCount: 'infinite',
 };
 
+export function Ping({
+  style,
+  children,
+  ...rest
+}: React.PropsWithChildren<CSSAnimationProps>): JSX.Element {
+  return (
+    <Animated.View style={[ping, style]} {...rest}>
+      {children}
+    </Animated.View>
+  );
+}
+
 export const pulse: CSSStyleDeclaration = {
   animationName: {
     '50%': {
@@ -56,6 +84,18 @@ export const pulse: CSSStyleDeclaration = {
   animationTimingFunction: cubicBezier(0.4, 0, 0.6, 1),
   animationIterationCount: 'infinite',
 };
+
+export function Pulse({
+  style,
+  children,
+  ...rest
+}: React.PropsWithChildren<CSSAnimationProps>): JSX.Element {
+  return (
+    <Animated.View style={[pulse, style]} {...rest}>
+      {children}
+    </Animated.View>
+  );
+}
 
 export const bounce: CSSStyleDeclaration = {
   animationName: {
@@ -71,3 +111,15 @@ export const bounce: CSSStyleDeclaration = {
   animationDuration: '1s',
   animationIterationCount: 'infinite',
 };
+
+export function Bounce({
+  style,
+  children,
+  ...rest
+}: React.PropsWithChildren<CSSAnimationProps>): JSX.Element {
+  return (
+    <Animated.View style={[bounce, style]} {...rest}>
+      {children}
+    </Animated.View>
+  );
+}
