@@ -1,5 +1,7 @@
 <img width="1100" alt="header" src="https://github.com/user-attachments/assets/f007398e-68f6-446a-8580-8a0fb3fab57a" />
 
+# Reanimated 4 comes with a native support for CSS Animations and CSS Transitions in React Native. [Check the full announcement here 👈](https://blog.swmansion.com/).
+
 Ready-to-use CSS Animation presets for React Native Reanimated
 
 ## Installation
