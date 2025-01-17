@@ -1,4 +1,5 @@
-<img width="1100" alt="header" src="https://github.com/user-attachments/assets/f007398e-68f6-446a-8580-8a0fb3fab57a" />
+<img width="1100" alt="header" src="https://github.com/user-attachments/assets/cbf6ecfa-8a0f-4841-8fc0-982aa04e618e" />
+
 
 Ready-to-use CSS Animation presets for [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 
