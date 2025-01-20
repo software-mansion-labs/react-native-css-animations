@@ -1,9 +1,23 @@
+import { bounce, ping, pulse, spin } from 'react-native-css-animations';
+
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import Animated from 'react-native-reanimated';
 import Fontisto from '@expo/vector-icons/Fontisto';
 import Entypo from '@expo/vector-icons/Entypo';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
-import { bounce, ping, pulse, spin } from 'react-native-css-animations';
+import MaskedView from '@react-native-masked-view/masked-view';
+
+const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
+
+const shimmer = {
+  from: {
+    transform: [{ translateX: '-25%' }],
+  },
+  to: {
+    transform: [{ translateX: '25%' }],
+  },
+};
 
 export default function App() {
   return (
@@ -35,6 +49,42 @@ export default function App() {
       <Animated.View style={[styles.arrow, bounce]}>
         <Entypo name="chevron-down" size={24} color="black" />
       </Animated.View>
+
+      <Text style={styles.label}>Skimmer</Text>
+      <View style={styles.shimmerContainer}>
+        <MaskedView
+          style={{ height: 48, width: 48 + 12 + 150 }}
+          maskElement={
+            <View style={styles.skeletonContainer}>
+              <Animated.View style={styles.skeletonAvatar} />
+              <Animated.View style={styles.skeletonText} />
+            </View>
+          }
+        >
+          <Animated.View
+            style={{
+              flex: 1,
+              width: '300%',
+              marginHorizontal: '-100%',
+              animationName: shimmer,
+              animationDuration: '1s',
+              animationIterationCount: 'infinite',
+              animationTimingFunction: 'linear',
+            }}
+          >
+            <AnimatedLinearGradient
+              colors={['#e2e8f0', '#f8fafc', '#e2e8f0']}
+              locations={[0.46, 0.5, 0.54]}
+              start={{ x: 0, y: -5 }}
+              end={{ x: 1, y: 5 }}
+              style={{
+                flex: 1,
+                width: '100%',
+              }}
+            />
+          </Animated.View>
+        </MaskedView>
+      </View>
     </SafeAreaView>
   );
 }
@@ -115,5 +165,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: '#e2e8f0',
+  },
+  shimmerContainer: {
+    width: '100%',
+    height: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
