@@ -1,6 +1,5 @@
 <img width="1100" alt="header" src="https://github.com/user-attachments/assets/cbf6ecfa-8a0f-4841-8fc0-982aa04e618e" />
 
-
 Ready-to-use CSS Animation presets for [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 
 > [!TIP]
@@ -75,12 +74,36 @@ function App() {
 }
 ```
 
+### Shimmer
+
+Add `shimmer` style object to an `Animated` component to make it animate from left to right indefinitely. Great for shimmer loading effect.
+
+<img src="https://github.com/user-attachments/assets/81e75ed0-b7ec-4f56-a06a-c593a626cb39" alt="Shimmer animation demo" align="right" width="275" />
+
+> [!NOTE]
+> While the `shimmer` style object supports both iOS, Android, and the Web, the example video on the right uses `@react-native-masked-view/masked-view` and `expo-linear-gradient`, and thus doesn't work on the Web.
+
+```jsx
+import { shimmer } from 'react-native-css-animations';
+import Animated from 'react-native-reanimated';
+
+function App() {
+  return <Animated.View style={[styles.gradient, shimmer]} />;
+}
+```
+
 ## Alternative API
 
 The following animations are also available in a form of React Native components.
 
 ```jsx
-import { Spin, Ping, Pulse, Bounce } from 'react-native-css-animations';
+import {
+  Spin,
+  Ping,
+  Pulse,
+  Bounce,
+  Shimmer,
+} from 'react-native-css-animations';
 
 function App() {
   return (
@@ -88,6 +111,29 @@ function App() {
       <ArrowIcon />
     </Bounce>
   );
+}
+```
+
+## Customizing animation presets
+
+You can customize the animation style objects by overriding the styles like so:
+
+```diff
+import { shimmer } from 'react-native-css-animations';
+import Animated from 'react-native-reanimated';
+
+function App() {
+  return <Animated.View
+    style={[
+      styles.gradient,
+      shimmer,
++      {
++        animationName: {
++          to: { transform: [{ translateX: '100%' }] },
++        },
++      },
+    ]}
+  >
 }
 ```
 
