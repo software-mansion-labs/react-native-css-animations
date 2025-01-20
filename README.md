@@ -78,7 +78,7 @@ function App() {
 
 Add `shimmer` style object to an `Animated` component to make it animate from left to right indefinitely. Great for shimmer loading effect.
 
-<img src="https://github.com/user-attachments/assets/81e75ed0-b7ec-4f56-a06a-c593a626cb39" alt="Shimmer animation demo" align="right" width="275" />
+<img src="https://github.com/user-attachments/assets/a64e8872-ce21-4681-9cc3-27b8497280ff" alt="Shimmer animation demo" align="right" width="275" />
 
 > [!NOTE]
 > While the `shimmer` style object supports both iOS, Android, and the Web, the example video on the right uses `@react-native-masked-view/masked-view` and `expo-linear-gradient`, and thus doesn't work on the Web.
