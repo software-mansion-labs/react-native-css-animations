@@ -1,9 +1,18 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import {
+  bounce,
+  ping,
+  pulse,
+  shimmer,
+  spin,
+} from 'react-native-css-animations';
+
+import { Platform, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import Animated from 'react-native-reanimated';
 import Fontisto from '@expo/vector-icons/Fontisto';
 import Entypo from '@expo/vector-icons/Entypo';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
-import { bounce, ping, pulse, spin } from 'react-native-css-animations';
+import MaskedView from '@react-native-masked-view/masked-view';
 
 export default function App() {
   return (
@@ -32,9 +41,38 @@ export default function App() {
       </View>
 
       <Text style={styles.label}>Bounce</Text>
+      {/* Bounce animation ⬇️ */}
       <Animated.View style={[styles.arrow, bounce]}>
         <Entypo name="chevron-down" size={24} color="black" />
       </Animated.View>
+
+      {(Platform.OS === 'ios' || Platform.OS === 'android') && (
+        <>
+          <Text style={styles.label}>Shimmer</Text>
+          <View style={styles.shimmerContainer}>
+            <MaskedView
+              style={styles.mask}
+              maskElement={
+                <View style={styles.skeletonContainer}>
+                  <Animated.View style={styles.skeletonAvatar} />
+                  <Animated.View style={styles.skeletonText} />
+                </View>
+              }
+            >
+              {/* Shimmer animation ⬇️ */}
+              <Animated.View style={[styles.gradientContainer, shimmer]}>
+                <LinearGradient
+                  colors={['#e2e8f0', '#f8fafc', '#e2e8f0']}
+                  locations={[0.46, 0.5, 0.54]}
+                  start={{ x: 0, y: -5 }}
+                  end={{ x: 1, y: 5 }}
+                  style={styles.gradient}
+                />
+              </Animated.View>
+            </MaskedView>
+          </View>
+        </>
+      )}
     </SafeAreaView>
   );
 }
@@ -115,5 +153,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: '#e2e8f0',
+  },
+  shimmerContainer: {
+    width: '100%',
+    height: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mask: {
+    height: 48,
+    width: 210,
+  },
+  gradientContainer: {
+    flex: 1,
+    width: '300%',
+    marginHorizontal: '-100%',
+  },
+  gradient: {
+    flex: 1,
+    width: '100%',
   },
 });

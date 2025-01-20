@@ -2906,6 +2906,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-masked-view/masked-view@npm:0.3.2":
+  version: 0.3.2
+  resolution: "@react-native-masked-view/masked-view@npm:0.3.2"
+  peerDependencies:
+    react: ">=16"
+    react-native: ">=0.57"
+  checksum: e35ab882148df3f9b71f04355d2fb1b24d6f2aaf29043f80758f398bdf905eed67734b36b072fa8b934923ff4e3d80ccb5e37d8376cb1825272078b96a21dadc
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.76.6":
   version: 0.76.6
   resolution: "@react-native/assets-registry@npm:0.76.6"
@@ -6543,6 +6553,17 @@ __metadata:
     expo: "*"
     react: "*"
   checksum: 979ca89c95b37ac1fd13be82490515583e5c2dfd3f2f1919da3e3d453d78e5dc1df4420606934d787049c5d65b3613ff1428c6ee11ca8d28f00d99796f913f23
+  languageName: node
+  linkType: hard
+
+"expo-linear-gradient@npm:~14.0.2":
+  version: 14.0.2
+  resolution: "expo-linear-gradient@npm:14.0.2"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 3f318f50fae44b1f2f90becf421a1c7c0c2822e0a381031fa6d893899173b7ecc6f0c4eddde699e6825fd091d5576cf5960ba81046aeaf0300f44de1147bb543
   languageName: node
   linkType: hard
 
@@ -11785,7 +11806,9 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.0
     "@expo/metro-runtime": ~4.0.0
+    "@react-native-masked-view/masked-view": 0.3.2
     expo: ~52.0.25
+    expo-linear-gradient: ~14.0.2
     expo-status-bar: ~2.0.1
     react: 18.3.1
     react-dom: 18.3.1

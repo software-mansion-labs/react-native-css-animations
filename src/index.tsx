@@ -123,3 +123,29 @@ export function Bounce({
     </Animated.View>
   );
 }
+
+export const shimmer: CSSStyleDeclaration = {
+  animationName: {
+    from: {
+      transform: [{ translateX: '-25%' }],
+    },
+    to: {
+      transform: [{ translateX: '25%' }],
+    },
+  },
+  animationDuration: '1s',
+  animationIterationCount: 'infinite',
+  animationTimingFunction: 'linear',
+};
+
+export function Shimmer({
+  style,
+  children,
+  ...rest
+}: React.PropsWithChildren<CSSAnimationProps>): JSX.Element {
+  return (
+    <Animated.View style={[shimmer, style]} {...rest}>
+      {children}
+    </Animated.View>
+  );
+}
