@@ -14,8 +14,6 @@ import Entypo from '@expo/vector-icons/Entypo';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import MaskedView from '@react-native-masked-view/masked-view';
 
-const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
-
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
@@ -63,7 +61,7 @@ export default function App() {
             >
               {/* Shimmer animation ⬇️ */}
               <Animated.View style={[styles.gradientContainer, shimmer]}>
-                <AnimatedLinearGradient
+                <LinearGradient
                   colors={['#e2e8f0', '#f8fafc', '#e2e8f0']}
                   locations={[0.46, 0.5, 0.54]}
                   start={{ x: 0, y: -5 }}
