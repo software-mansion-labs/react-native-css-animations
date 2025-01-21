@@ -27,6 +27,9 @@ interface CSSAnimationProps {
   style?: CSSStyleDeclaration;
 }
 
+/**
+ * A `spin` style object to an `Animated` component add a linear spinning animation. Great for loaders.
+ */
 export const spin: CSSStyleDeclaration = {
   animationName: {
     to: {
@@ -50,6 +53,9 @@ export function Spin({
   );
 }
 
+/**
+ * Add `ping` style object to an `Animated` component to make the element scale and fade. Great for attention grabbing elements like notifications.
+ */
 export const ping: CSSStyleDeclaration = {
   animationName: {
     '75%, 100%': {
@@ -74,6 +80,9 @@ export function Ping({
   );
 }
 
+/**
+ * Add `pulse` style object to an `Animated` component to make it fade in and out. Great for skeleton loaders.
+ */
 export const pulse: CSSStyleDeclaration = {
   animationName: {
     '50%': {
@@ -97,6 +106,9 @@ export function Pulse({
   );
 }
 
+/**
+ * Add `bounce` style object to an `Animated` component to make it bounce up and down. Great for scroll down indicators.
+ */
 export const bounce: CSSStyleDeclaration = {
   animationName: {
     '0%, 100%': {
@@ -124,6 +136,9 @@ export function Bounce({
   );
 }
 
+/**
+ * Add `shimmer` style object to an `Animated` component to make it animate from left to right indefinitely. Great for shimmer loading effect.
+ */
 export const shimmer: CSSStyleDeclaration = {
   animationName: {
     from: {
