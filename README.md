@@ -81,7 +81,7 @@ Add `shimmer` style object to an `Animated` component to make it animate from le
 <img src="https://github.com/user-attachments/assets/a64e8872-ce21-4681-9cc3-27b8497280ff" alt="Shimmer animation demo" align="right" width="275" />
 
 > [!NOTE]
-> While the `shimmer` style object supports both iOS, Android, and the Web, the example video on the right uses `@react-native-masked-view/masked-view` and `expo-linear-gradient`, and thus doesn't work on the Web.
+> The example video on the right uses `@react-native-masked-view/masked-view` and `expo-linear-gradient`, and thus doesn't work on the Web.
 
 ```jsx
 import { shimmer } from 'react-native-css-animations';
