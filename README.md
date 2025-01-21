@@ -8,7 +8,7 @@ Ready-to-use CSS Animation presets for [React Native Reanimated](https://docs.sw
 ## Installation
 
 <pre>
-yarn add <a href="https://github.com/software-mansion/react-native-reanimated" target="_blank">react-native-reanimated@next</a>
+yarn add <a href="https://github.com/software-mansion/react-native-reanimated/docs/next/category/css-animations" target="_blank">react-native-reanimated@next</a>
 yarn add react-native-css-animations
 </pre>
 
