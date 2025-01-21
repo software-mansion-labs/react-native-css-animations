@@ -1,7 +1,7 @@
 {
   "name": "react-native-css-animations",
   "version": "0.0.1",
-  "description": "Effortless CSS animations and transitions in React Native",
+  "description": "React Native CSS Animation presets for Reanimated 4",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
