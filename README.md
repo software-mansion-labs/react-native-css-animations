@@ -3,7 +3,7 @@
 Ready-to-use CSS Animation presets for [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 
 > [!TIP]
-> Since version 4.0, React Native Reanimated comes with a native support for CSS Animations and Transitions. Read [the full announcement to learn more](https://blog.swmansion.com/).
+> Since version 4.0, React Native Reanimated comes with a native support for CSS Animations and Transitions. Read [the full announcement to learn more](https://blog.swmansion.com/reanimated-4-is-new-but-also-very-familiar-b926dd59aa40).
 
 ## Installation
 
