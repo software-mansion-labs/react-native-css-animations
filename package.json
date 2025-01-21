@@ -52,14 +52,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kacperkapusciak/react-native-css-animations.git"
+    "url": "git+https://github.com/software-mansion-labs/react-native-css-animations.git"
   },
   "author": "kacperkapusciak <kacper.kapusciak@swmansion.com> (https://github.com/kacperkapusciak)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kacperkapusciak/react-native-css-animations/issues"
+    "url": "https://github.com/software-mansion-labs/react-native-css-animations/issues"
   },
-  "homepage": "https://github.com/kacperkapusciak/react-native-css-animations#readme",
+  "homepage": "https://github.com/software-mansion-labs/react-native-css-animations#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
