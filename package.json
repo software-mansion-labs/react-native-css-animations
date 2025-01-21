@@ -20,10 +20,10 @@
   "files": [
     "src",
     "lib",
-    "android",
-    "ios",
-    "cpp",
-    "*.podspec",
+    "!android",
+    "!ios",
+    "!cpp",
+    "!*.podspec",
     "react-native.config.js",
     "!ios/build",
     "!android/build",
@@ -90,7 +90,7 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-reanimated": ">=4.0.0"
+    "react-native-reanimated": "*"
   },
   "workspaces": [
     "example"
