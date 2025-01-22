@@ -3,20 +3,10 @@
   "version": "0.1.0",
   "description": "React Native CSS Animation presets for Reanimated 4",
   "source": "./src/index.tsx",
-  "main": "./lib/commonjs/index.js",
-  "module": "./lib/module/index.js",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./lib/typescript/module/src/index.d.ts",
-        "default": "./lib/module/index.js"
-      },
-      "require": {
-        "types": "./lib/typescript/commonjs/src/index.d.ts",
-        "default": "./lib/commonjs/index.js"
-      }
-    }
-  },
+  "react-native": "./src/index",
+  "main": "./lib/module/index",
+  "module": "./lib/module/index",
+  "types": "./lib/typescript/module/src/index.d.ts",
   "files": [
     "src",
     "lib",
@@ -47,6 +37,9 @@
   },
   "keywords": [
     "react-native",
+    "reanimated",
+    "css animations",
+    "css transitions",
     "ios",
     "android"
   ],
@@ -154,13 +147,6 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "codegen",
-      [
-        "commonjs",
-        {
-          "esm": true
-        }
-      ],
       [
         "module",
         {
@@ -175,18 +161,6 @@
         }
       ]
     ]
-  },
-  "codegenConfig": {
-    "name": "RNCssAnimationsSpec",
-    "type": "modules",
-    "jsSrcsDir": "src",
-    "outputDir": {
-      "ios": "ios/generated",
-      "android": "android/generated"
-    },
-    "android": {
-      "javaPackageName": "com.cssanimations"
-    }
   },
   "create-react-native-library": {
     "languages": "js",
