@@ -1,6 +1,6 @@
 {
   "name": "react-native-css-animations",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native CSS Animation presets for Reanimated 4",
   "source": "./src/index.tsx",
   "react-native": "./src/index",
