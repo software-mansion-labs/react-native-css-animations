@@ -20,17 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 import * as React from 'react';
+import type { StyleProp, ViewStyle } from 'react-native';
 import Animated, { cubicBezier } from 'react-native-reanimated';
-import type { CSSStyleDeclaration } from 'react-native-reanimated/lib/typescript/css/types';
+import type {
+  AnimatedStyle,
+  CSSAnimationProperties,
+} from 'react-native-reanimated';
 
 interface CSSAnimationProps {
-  style?: CSSStyleDeclaration;
+  style?: StyleProp<AnimatedStyle<StyleProp<ViewStyle>>>;
 }
 
 /**
  * A `spin` style object to an `Animated` component add a linear spinning animation. Great for loaders.
  */
-export const spin: CSSStyleDeclaration = {
+export const spin: CSSAnimationProperties = {
   animationName: {
     to: {
       transform: [{ rotate: '360deg' }],
@@ -56,7 +60,7 @@ export function Spin({
 /**
  * Add `ping` style object to an `Animated` component to make the element scale and fade. Great for attention grabbing elements like notifications.
  */
-export const ping: CSSStyleDeclaration = {
+export const ping: CSSAnimationProperties = {
   animationName: {
     '75%, 100%': {
       transform: [{ scale: 2 }],
@@ -83,7 +87,7 @@ export function Ping({
 /**
  * Add `pulse` style object to an `Animated` component to make it fade in and out. Great for skeleton loaders.
  */
-export const pulse: CSSStyleDeclaration = {
+export const pulse: CSSAnimationProperties = {
   animationName: {
     '50%': {
       opacity: 0.5,
@@ -109,7 +113,7 @@ export function Pulse({
 /**
  * Add `bounce` style object to an `Animated` component to make it bounce up and down. Great for scroll down indicators.
  */
-export const bounce: CSSStyleDeclaration = {
+export const bounce: CSSAnimationProperties = {
   animationName: {
     '0%, 100%': {
       transform: [{ translateY: '-25%' }],
@@ -139,7 +143,7 @@ export function Bounce({
 /**
  * Add `shimmer` style object to an `Animated` component to make it animate from left to right indefinitely. Great for shimmer loading effect.
  */
-export const shimmer: CSSStyleDeclaration = {
+export const shimmer: CSSAnimationProperties = {
   animationName: {
     from: {
       transform: [{ translateX: '-25%' }],
