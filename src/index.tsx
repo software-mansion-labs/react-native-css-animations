@@ -32,7 +32,7 @@ interface CSSAnimationProps {
 }
 
 /**
- * A `spin` style object to an `Animated` component add a linear spinning animation. Great for loaders.
+ * Add `spin` style object to an `Animated` component add a linear spinning animation. Great for loaders.
  */
 export const spin: CSSAnimationProperties = {
   animationName: {
