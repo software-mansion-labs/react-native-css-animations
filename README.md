@@ -80,9 +80,6 @@ Add `shimmer` style object to an `Animated` component to make it animate from le
 
 <img src="https://github.com/user-attachments/assets/a64e8872-ce21-4681-9cc3-27b8497280ff" alt="Shimmer animation demo" align="right" width="275" />
 
-> [!NOTE]
-> The example video on the right uses `@react-native-masked-view/masked-view` and `expo-linear-gradient`, and thus doesn't work on the Web.
-
 ```jsx
 import { shimmer } from 'react-native-css-animations';
 import Animated from 'react-native-reanimated';
@@ -107,7 +104,7 @@ import {
 
 function App() {
   return (
-    <Bounce>
+    <Bounce style={styles.arrow}>
       <ArrowIcon />
     </Bounce>
   );
@@ -137,6 +134,14 @@ function App() {
 }
 ```
 
+## Examples
+
+See how the examples where implemented in [our Example app](https://github.com/software-mansion-labs/react-native-css-animations/blob/main/example/src/App.tsx).
+
 ## Credits
 
-- The examples and animations were adopted from [Tailwind CSS](https://tailwindcss.com/docs/animation).
+Most of the examples and animations were adopted from [Tailwind CSS](https://tailwindcss.com/docs/animation).
+
+## React Native CSS Animations were brought to you by Software Mansion
+
+We are a software agency with experience in building web and mobile apps. Core React Native Contributors and experts in dealing with all kinds of React Native issues. We can help you build your next dream product – [Hire us](https://swmansion.com/contact/projects?utm_source=css-animations&utm_medium=readme).
