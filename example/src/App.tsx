@@ -6,12 +6,11 @@ import {
   spin,
 } from 'react-native-css-animations';
 
-import { Platform, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import Fontisto from '@expo/vector-icons/Fontisto';
 import Entypo from '@expo/vector-icons/Entypo';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
-import MaskedView from '@react-native-masked-view/masked-view';
 
 export default function App() {
   return (
@@ -35,6 +34,7 @@ export default function App() {
 
       <Text style={styles.label}>Pulse</Text>
       <View style={styles.skeletonContainer}>
+        {/* Pulse animation ⬇️ */}
         <Animated.View style={[styles.skeletonAvatar, pulse]} />
         <Animated.View style={[styles.skeletonText, pulse]} />
       </View>
@@ -45,25 +45,11 @@ export default function App() {
         <Entypo name="chevron-down" size={24} color="black" />
       </Animated.View>
 
-      {(Platform.OS === 'ios' || Platform.OS === 'android') && (
-        <>
-          <Text style={styles.label}>Shimmer</Text>
-          <View style={styles.shimmerContainer}>
-            <MaskedView
-              style={styles.mask}
-              maskElement={
-                <View style={styles.skeletonContainer}>
-                  <Animated.View style={styles.skeletonAvatar} />
-                  <Animated.View style={styles.skeletonText} />
-                </View>
-              }
-            >
-              {/* Shimmer animation ⬇️ */}
-              <Animated.View style={[styles.gradient, shimmer]} />
-            </MaskedView>
-          </View>
-        </>
-      )}
+      <Text style={styles.label}>Shimmer</Text>
+      <View style={styles.shimmerContainer}>
+        {/* Shimmer animation ⬇️ */}
+        <Animated.View style={[styles.gradient, shimmer]} />
+      </View>
     </SafeAreaView>
   );
 }
@@ -80,13 +66,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 18,
     marginTop: 24,
-  },
-  box: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   button: {
     flexDirection: 'row',
@@ -146,14 +125,10 @@ const styles = StyleSheet.create({
     borderColor: '#e2e8f0',
   },
   shimmerContainer: {
-    width: '100%',
-    height: 48,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  mask: {
-    height: 48,
-    width: 210,
+    width: 180,
+    height: 42,
+    overflow: 'hidden',
+    borderRadius: 8,
   },
   gradient: {
     flex: 1,
@@ -162,6 +137,6 @@ const styles = StyleSheet.create({
     [process.env.EXPO_OS === 'web'
       ? 'backgroundImage'
       : 'experimental_backgroundImage']:
-      'linear-gradient(100deg, #e2e8f0 46%, #f8fafc 50%, #e2e8f0 54%)',
+      'linear-gradient(100deg, #ebeff5 46%, #fafafa 50%, #ebeff5 54%)',
   },
 });
