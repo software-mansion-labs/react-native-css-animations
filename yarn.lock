@@ -6542,17 +6542,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-linear-gradient@npm:~14.0.2":
-  version: 14.0.2
-  resolution: "expo-linear-gradient@npm:14.0.2"
-  peerDependencies:
-    expo: "*"
-    react: "*"
-    react-native: "*"
-  checksum: 3f318f50fae44b1f2f90becf421a1c7c0c2822e0a381031fa6d893899173b7ecc6f0c4eddde699e6825fd091d5576cf5960ba81046aeaf0300f44de1147bb543
-  languageName: node
-  linkType: hard
-
 "expo-modules-autolinking@npm:2.0.7":
   version: 2.0.7
   resolution: "expo-modules-autolinking@npm:2.0.7"
@@ -11753,7 +11742,6 @@ __metadata:
     "@expo/metro-runtime": ~4.0.0
     "@react-native-masked-view/masked-view": 0.3.2
     expo: ~52.0.25
-    expo-linear-gradient: ~14.0.2
     expo-status-bar: ~2.0.1
     react: 18.3.1
     react-dom: 18.3.1

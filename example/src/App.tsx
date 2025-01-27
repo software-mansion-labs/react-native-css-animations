@@ -7,7 +7,6 @@ import {
 } from 'react-native-css-animations';
 
 import { Platform, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import Animated from 'react-native-reanimated';
 import Fontisto from '@expo/vector-icons/Fontisto';
 import Entypo from '@expo/vector-icons/Entypo';
@@ -60,15 +59,7 @@ export default function App() {
               }
             >
               {/* Shimmer animation ⬇️ */}
-              <Animated.View style={[styles.gradientContainer, shimmer]}>
-                <LinearGradient
-                  colors={['#e2e8f0', '#f8fafc', '#e2e8f0']}
-                  locations={[0.46, 0.5, 0.54]}
-                  start={{ x: 0, y: -5 }}
-                  end={{ x: 1, y: 5 }}
-                  style={styles.gradient}
-                />
-              </Animated.View>
+              <Animated.View style={[styles.gradient, shimmer]} />
             </MaskedView>
           </View>
         </>
@@ -164,13 +155,13 @@ const styles = StyleSheet.create({
     height: 48,
     width: 210,
   },
-  gradientContainer: {
+  gradient: {
     flex: 1,
     width: '300%',
     marginHorizontal: '-100%',
-  },
-  gradient: {
-    flex: 1,
-    width: '100%',
+    [process.env.EXPO_OS === 'web'
+      ? 'backgroundImage'
+      : 'experimental_backgroundImage']:
+      'linear-gradient(100deg, #e2e8f0 46%, #f8fafc 50%, #e2e8f0 54%)',
   },
 });
